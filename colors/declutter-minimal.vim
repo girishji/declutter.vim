@@ -37,4 +37,5 @@ hi PmenuSel     ctermfg=2       ctermbg=none cterm=reverse
 hi PmenuSbar    ctermfg=none    ctermbg=none
 hi PmenuThumb   ctermfg=none    ctermbg=none cterm=reverse
 
-hi comment cterm=italic
+# hi comment cterm=italic
+hi comment ctermfg=6 cterm=italic
