@@ -41,4 +41,7 @@ if &background ==? 'light'
     hi comment cterm=italic
 else
     hi comment ctermfg=6 cterm=italic
+    hi special ctermfg=15
+    hi type ctermfg=10
+    hi preproc ctermfg=14
 endif
