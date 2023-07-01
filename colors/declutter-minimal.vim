@@ -44,5 +44,5 @@ else
     hi special ctermfg=15
     hi type ctermfg=10
     hi preproc ctermfg=14
-    hi matchparen cterm=underline
+    hi matchparen cterm=underline,reverse
 endif
