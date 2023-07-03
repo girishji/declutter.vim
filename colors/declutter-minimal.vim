@@ -39,6 +39,8 @@ hi PmenuThumb   ctermfg=none    ctermbg=none cterm=reverse
 
 if &background ==? 'light'
     hi comment cterm=italic
+    hi Statement ctermfg=3
+    hi Constant ctermfg=13
 else
     hi comment ctermfg=6 cterm=italic
     hi special ctermfg=15
