@@ -41,6 +41,7 @@ if &background ==? 'light'
     hi comment cterm=italic
     hi Statement ctermfg=3
     hi wildmenu ctermfg=none ctermbg=none cterm=reverse
+    hi todo ctermfg=none ctermbg=none cterm=reverse
 else
     hi comment ctermfg=6 cterm=italic
     hi special ctermfg=15
