@@ -30,7 +30,7 @@ exec $'hi! DiffText    ctermfg=5    ctermbg={bg}'
 hi! incsearch ctermfg=5 ctermbg=none cterm=reverse
 hi! link signcolumn linenr
 hi! link foldcolumn signcolumn
-exec 'hi! linenr    ctermfg=' .. fg .. ' ctermbg=none'
+exec 'hi! linenr    ctermfg=' .. fg2 .. ' ctermbg=none'
 
 if &background ==? 'light'
     hi PmenuSel     ctermfg=0       ctermbg=none cterm=reverse
