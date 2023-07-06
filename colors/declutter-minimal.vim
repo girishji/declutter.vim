@@ -32,17 +32,17 @@ hi! link signcolumn linenr
 hi! link foldcolumn signcolumn
 exec 'hi! linenr    ctermfg=' .. fg .. ' ctermbg=none'
 
-exec $'hi pmenu ctermfg=none ctermbg={bg2} cterm=none'
-hi PmenuSel     ctermfg=2       ctermbg=none cterm=reverse
-hi PmenuSbar    ctermfg=none    ctermbg=none
-hi PmenuThumb   ctermfg=none    ctermbg=none cterm=reverse
-
 if &background ==? 'light'
+    hi PmenuSel     ctermfg=0       ctermbg=none cterm=reverse
     hi comment cterm=italic
     hi Statement ctermfg=3
     hi wildmenu ctermfg=none ctermbg=none cterm=reverse
     hi todo ctermfg=none ctermbg=none cterm=reverse
 else
+    exec $'hi pmenu ctermfg=none ctermbg={bg2} cterm=none'
+    hi PmenuSel     ctermfg=2       ctermbg=none cterm=reverse
+    hi PmenuSbar    ctermfg=none    ctermbg=none
+    hi PmenuThumb   ctermfg=none    ctermbg=none cterm=reverse
     hi comment ctermfg=6 cterm=italic
     hi special ctermfg=15
     hi type ctermfg=10
