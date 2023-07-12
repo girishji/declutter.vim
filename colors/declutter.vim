@@ -30,7 +30,7 @@ hi Identifier	ctermfg=none cterm=none
 #   Keyword	        any other keyword (class, return, etc.)
 #   Exception	try, catch, throw
 hi Statement	ctermfg=none
-hi link		Operator Delimiter
+hi Operator	ctermfg=3 cterm=none
 
 #  *PreProc	generic Preprocessor
 #   Include	preprocessor #include

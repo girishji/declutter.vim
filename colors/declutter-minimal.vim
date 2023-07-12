@@ -17,7 +17,7 @@ g:colors_name = "declutter-minimal"
 
 var bg: number = &background == 'dark' ? 0 : 7
 var fg: number = &background == 'dark' ? 7 : 0
-var bg2: number = &background == 'dark' ? 8 : 15 
+var bg2: number = &background == 'dark' ? 8 : 15
 var fg2: number = &background == 'dark' ? 15 : 8
 
 exec $'hi! search      ctermfg={fg2} ctermbg={bg} cterm=reverse'
