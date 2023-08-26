@@ -35,7 +35,7 @@ exec 'hi! linenr    ctermfg=' .. fg2 .. ' ctermbg=none'
 if &background ==? 'light'
     hi PmenuSel     ctermfg=0       ctermbg=none cterm=reverse
     hi comment cterm=italic
-    hi Statement ctermfg=3
+    # hi Statement ctermfg=3
     hi wildmenu ctermfg=none ctermbg=none cterm=reverse
     hi todo ctermfg=none ctermbg=none cterm=reverse
 else
