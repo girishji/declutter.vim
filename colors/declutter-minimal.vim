@@ -21,7 +21,7 @@ var bg2: number = &background == 'dark' ? 8 : 15
 var fg2: number = &background == 'dark' ? 15 : 8
 
 exec $'hi! search      ctermfg={fg2} ctermbg={bg} cterm=reverse'
-exec $'hi! matchparen  ctermfg=6    ctermbg={bg} cterm=none'
+exec $'hi! matchparen  ctermfg=1    ctermbg={bg} cterm=none'
 exec $'hi! cursorline  ctermfg=none ctermbg={bg} cterm=none'
 exec $'hi! DiffAdd     ctermfg=2    ctermbg={bg}'
 exec $'hi! DiffChange  ctermfg=3    ctermbg={bg}'
