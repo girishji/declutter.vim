@@ -32,10 +32,17 @@ hi Identifier	cterm=bold
 hi Statement	cterm=italic
 Substitute('Operator', 'Statement', {cterm: 'none'})
 hi PreProc	cterm=italic
+hi Special ctermfg=10
+
+# Python
 hi default pythonOperator2 ctermfg=15
 hi default link pythonBracket pythonOperator2
 hi default link pythonParen pythonOperator2
-hi Special ctermfg=10
+hi link pythonFunctionCall Function
+
+# XXX following does not work
+hi pythonAttribute ctermfg=13
+# hi pythonAttribute2 ctermfg=13
 
 # Generic syntax
 # https://vimdoc.sourceforge.net/htmldoc/syntax.html
