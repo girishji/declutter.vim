@@ -11,14 +11,10 @@ def Substitute(grp: string, src: string, attr: dict<any>)
         return
     endif
     var cmd = ''
-    if attr->has_key('ctermfg')
-        var aval = gnum->synIDattr('fg', 'cterm')
-        cmd = $'{cmd} ctermfg=' .. (aval != '' ? aval : attr['ctermfg'])
-    endif
-    if attr->has_key('ctermbg')
-        var aval = gnum->synIDattr('bg', 'cterm')
-        cmd = $'{cmd} ctermbg=' .. (aval != '' ? aval : attr['ctermbg'])
-    endif
+    var fg = gnum->synIDattr('fg', 'cterm')
+    cmd = $'{cmd} ctermfg=' .. (attr->has_key('ctermfg') ? attr['ctermfg'] : fg->empty() ? 'none' : fg)
+    var bg = gnum->synIDattr('bg', 'cterm')
+    cmd = $'{cmd} ctermbg=' .. (attr->has_key('ctermbg') ? attr['ctermbg'] : bg->empty() ? 'none' : bg)
     if attr->has_key('cterm')
         cmd = $'{cmd} cterm=' .. attr['cterm']
     endif
@@ -30,12 +26,20 @@ enddef
 # Stylize font
 hi Identifier	cterm=bold
 hi Statement	cterm=italic
-Substitute('Operator', 'Statement', {cterm: 'none'})
+# Substitute('Operator', 'Statement', {cterm: 'none'})
 hi PreProc	cterm=italic
+
 hi Special ctermfg=10
 
+# help files
+if &background == 'dark'
+    Substitute('String', 'Constant', {ctermfg: 14, ctermbg: 236})
+endif
+Substitute('helpHyperTextJump', 'Identifier', {cterm: 'underline'})
+Substitute('helpHeader', 'PreProc', {cterm: 'bold'})
+
 # Python
-hi default pythonOperator2 ctermfg=15
+exec $'hi default pythonOperator2 ctermfg={&background == "dark" ? 15 : 11}'
 hi default link pythonBracket pythonOperator2
 hi default link pythonParen pythonOperator2
 hi link pythonFunctionCall Function
