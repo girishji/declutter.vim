@@ -33,7 +33,9 @@ hi Special ctermfg=10
 
 # help files
 if &background == 'dark'
-    Substitute('String', 'Constant', {ctermfg: 14, ctermbg: 236})
+    hi helpHyperTextEntry ctermfg=14 ctermbg=237 cterm=italic
+else
+    hi helpHyperTextEntry ctermbg=254 cterm=italic
 endif
 Substitute('helpHyperTextJump', 'Identifier', {cterm: 'underline'})
 Substitute('helpHeader', 'PreProc', {cterm: 'bold'})

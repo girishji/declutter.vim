@@ -45,7 +45,8 @@ if &background ==? 'light'
     hi wildmenu ctermfg=none ctermbg=none cterm=reverse
     hi todo ctermfg=none ctermbg=none cterm=reverse
 else
-    exec $'hi pmenu ctermfg=none ctermbg={bg} cterm=none'
+    # exec $'hi pmenu ctermfg=none ctermbg={bg} cterm=none'
+    exec $'hi pmenu ctermfg=2       ctermbg={bg} cterm=none'
     hi PmenuSel     ctermfg=2       ctermbg=none cterm=reverse
     hi PmenuSbar    ctermfg=none    ctermbg=none
     hi PmenuThumb   ctermfg=none    ctermbg=none cterm=reverse
