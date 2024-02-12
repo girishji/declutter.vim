@@ -92,3 +92,16 @@ def! g:DeclutterBrightenBoldFont()
         endif
     endfor
 enddef
+
+def! g:DeclutterUseTerminalFGBG()
+    var qfg = &background ==# 'dark' ? 253 : 16
+    var qbg = &background ==# 'dark' ? 16 : 188
+    for hg in execute('highlight')->split("\n")
+        var items = hg->split()
+        var fgidx = items->index($'ctermfg={qfg}')
+        var bgidx = items->index($'ctermbg={qbg}')
+        if fgidx != -1 || bgidx != -1
+            exec $'hi {items[0]} {fgidx != -1 ? "ctermfg=none" : ""} {bgidx != -1 ? "ctermbg=none" : ""}'
+        endif
+    endfor
+enddef
