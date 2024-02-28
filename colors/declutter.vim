@@ -15,7 +15,7 @@ endif
 
 exec $"source $VIMRUNTIME/colors/quiet.vim"
 
-# modify 'quiet' theme
+# overlay on Vim's 'quiet' theme
 
 g:colors_name = "declutter"
 
@@ -23,27 +23,42 @@ if &background ==# 'dark'
     highlight Normal ctermbg=None
     highlight Comment ctermfg=244
     highlight LineNr ctermfg=244
+
     highlight helpExample ctermfg=248
     highlight helpCommand ctermfg=248 ctermbg=235
     highlight LspSigActiveParameter ctermfg=207
+
     highlight statusline ctermbg=none ctermfg=248 guibg=Grey35 cterm=none
     highlight statuslinenc ctermbg=none ctermfg=242 guibg=Grey35 cterm=none
+
     highlight user1 ctermbg=none ctermfg=255 cterm=none
     highlight user2 ctermbg=none ctermfg=253 cterm=none
     highlight user3 ctermbg=none ctermfg=253 cterm=none
     highlight user4 ctermbg=none ctermfg=3 cterm=bold
     highlight FilterMenuMatch ctermfg=209 cterm=none
     highlight PopupBorderHighlight ctermfg=244
-    highlight PmenuKind ctermfg=246 ctermbg=8 cterm=none
-    highlight! link PmenuKindSel PmenuSel
-    highlight PmenuExtra ctermfg=246 ctermbg=8 cterm=none
-    highlight! link PmenuExtraSel PmenuSel
-    highlight Pmenu ctermfg=none ctermbg=8 cterm=none
-    highlight PmenuSel ctermfg=none ctermbg=24
-    highlight PmenuSbar ctermfg=none ctermbg=8
-    highlight PmenuThumb ctermfg=none ctermbg=240
+
     highlight CursorLine ctermfg=NONE ctermbg=8 cterm=NONE
     highlight clear LspDiagInlineWarning
+
+    highlight Pmenu ctermfg=254 ctermbg=none cterm=none
+    highlight PmenuSel ctermfg=none ctermbg=58
+    highlight PmenuSbar ctermfg=254 ctermbg=236
+    highlight PmenuThumb ctermfg=none ctermbg=238
+    highlight PmenuKind ctermfg=246 ctermbg=none cterm=none
+    highlight! link PmenuKindSel PmenuSel
+    highlight PmenuExtra ctermfg=246 ctermbg=none cterm=none
+    highlight! link PmenuExtraSel PmenuSel
+
+    # highlight PmenuKind ctermfg=246 ctermbg=8 cterm=none
+    # highlight! link PmenuKindSel PmenuSel
+    # highlight PmenuExtra ctermfg=246 ctermbg=8 cterm=none
+    # highlight! link PmenuExtraSel PmenuSel
+    # highlight Pmenu ctermfg=none ctermbg=8 cterm=none
+    # # highlight PmenuSel ctermfg=none ctermbg=24
+    # highlight PmenuSel ctermfg=none ctermbg=58
+    # highlight PmenuSbar ctermfg=none ctermbg=8
+    # highlight PmenuThumb ctermfg=none ctermbg=240
 else
     highlight statusline cterm=none
     highlight Comment cterm=none ctermfg=242
@@ -105,3 +120,20 @@ def! g:DeclutterUseTerminalFGBG()
         endif
     endfor
 enddef
+
+def SetHighlight()
+    # highlight link DevdocCodeblock Comment
+    # highlight DevdocBlockquote: 'None',
+    # highlight link DevdocLink Underlined
+    highlight link DevdocCode CursorLine
+    # highlight DevdocUnderline: 'Underlined',
+    # highlight DevdocSection: 'Comment',
+    highlight DevdocDefn cterm=bold
+    highlight DevdocH1 cterm=bold
+    highlight DevdocH2 cterm=bold
+    highlight DevdocH3 cterm=bold
+    highlight DevdocH4 cterm=bold
+    highlight DevdocH5 cterm=bold
+    highlight DevdocH6 cterm=bold
+enddef
+autocmd filetype devdoc SetHighlight()
