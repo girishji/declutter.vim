@@ -24,6 +24,8 @@ if &background ==# 'dark'
     highlight Comment ctermfg=244
     highlight LineNr ctermfg=244
 
+    # highlight SpecialKey ctermfg=240
+
     highlight helpExample ctermfg=248
     highlight helpCommand ctermfg=248 ctermbg=235
     highlight LspSigActiveParameter ctermfg=207
@@ -35,11 +37,13 @@ if &background ==# 'dark'
     highlight user2 ctermbg=none ctermfg=253 cterm=none
     highlight user3 ctermbg=none ctermfg=253 cterm=none
     highlight user4 ctermbg=none ctermfg=3 cterm=bold
-    highlight FilterMenuMatch ctermfg=209 cterm=none
-    highlight PopupBorderHighlight ctermfg=244
+
+    highlight ScopeMenuMatch ctermfg=209 cterm=none
+    highlight DevdocsMenuMatch ctermfg=209 cterm=none
+
+    highlight clear LspDiagInlineWarning
 
     highlight CursorLine ctermfg=NONE ctermbg=8 cterm=NONE
-    highlight clear LspDiagInlineWarning
 
     highlight Pmenu ctermfg=254 ctermbg=none cterm=none
     highlight PmenuSel ctermfg=none ctermbg=58
@@ -79,6 +83,7 @@ else
 endif
 
 highlight PreProc cterm=bold
+highlight Type cterm=italic
 
 highlight helpHeader cterm=bold
 highlight link helpNote Normal
