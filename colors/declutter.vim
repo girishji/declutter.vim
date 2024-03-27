@@ -86,6 +86,7 @@ highlight PreProc cterm=bold
 highlight Type cterm=italic
 
 highlight helpHeader cterm=bold
+highlight helpHeadline cterm=bold
 highlight link helpNote Normal
 highlight link helpHyperTextEntry Underlined
 highlight link helpHyperTextJump Underlined
