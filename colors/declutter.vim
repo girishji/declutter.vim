@@ -21,7 +21,8 @@ g:colors_name = "declutter"
 
 if &background ==# 'dark'
     highlight Normal ctermbg=None
-    highlight Comment ctermfg=244
+    # highlight Comment ctermfg=244 cterm=none
+    highlight Comment ctermfg=248 cterm=none
     highlight LineNr ctermfg=244
 
     # highlight SpecialKey ctermfg=240
@@ -33,10 +34,10 @@ if &background ==# 'dark'
     highlight statusline ctermbg=none ctermfg=248 guibg=Grey35 cterm=none
     highlight statuslinenc ctermbg=none ctermfg=242 guibg=Grey35 cterm=none
 
-    highlight user1 ctermbg=none ctermfg=255 cterm=none
-    highlight user2 ctermbg=none ctermfg=253 cterm=none
-    highlight user3 ctermbg=none ctermfg=253 cterm=none
-    highlight user4 ctermbg=none ctermfg=3 cterm=bold
+    # highlight user1 ctermbg=none ctermfg=255 cterm=none
+    # highlight user2 ctermbg=none ctermfg=253 cterm=none
+    # highlight user3 ctermbg=none ctermfg=253 cterm=none
+    # highlight user4 ctermbg=none ctermfg=3 cterm=bold
 
     highlight ScopeMenuMatch ctermfg=209 cterm=none
     highlight DevdocsMenuMatch ctermfg=209 cterm=none
