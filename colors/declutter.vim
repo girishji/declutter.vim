@@ -85,6 +85,7 @@ endif
 
 highlight PreProc cterm=bold
 highlight Type cterm=italic
+highlight String cterm=italic
 
 highlight helpHeader cterm=bold
 highlight helpHeadline cterm=bold
@@ -128,7 +129,7 @@ def! g:DeclutterUseTerminalFGBG()
     endfor
 enddef
 
-def SetHighlight()
+def DevdocSetHighlight()
     # highlight link DevdocCodeblock Comment
     # highlight DevdocBlockquote: 'None',
     # highlight link DevdocLink Underlined
@@ -143,4 +144,4 @@ def SetHighlight()
     highlight DevdocH5 cterm=bold
     highlight DevdocH6 cterm=bold
 enddef
-autocmd filetype devdoc SetHighlight()
+autocmd filetype devdoc DevdocSetHighlight()
