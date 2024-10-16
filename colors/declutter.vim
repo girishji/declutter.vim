@@ -31,8 +31,8 @@ if &background ==# 'dark'
     highlight helpCommand ctermfg=248 ctermbg=235
     highlight LspSigActiveParameter ctermfg=207
 
-    highlight statusline ctermbg=none ctermfg=248 guibg=Grey35 cterm=none
-    highlight statuslinenc ctermbg=none ctermfg=242 guibg=Grey35 cterm=none
+    # highlight statusline ctermbg=none ctermfg=248 guibg=Grey35 cterm=none
+    # highlight statuslinenc ctermbg=none ctermfg=242 guibg=Grey35 cterm=none
 
     # highlight user1 ctermbg=none ctermfg=255 cterm=none
     # highlight user2 ctermbg=none ctermfg=253 cterm=none
@@ -46,22 +46,33 @@ if &background ==# 'dark'
 
     highlight CursorLine ctermfg=NONE ctermbg=8 cterm=NONE
 
-    highlight Pmenu ctermfg=254 ctermbg=none cterm=none
-    highlight PmenuSel ctermfg=none ctermbg=58
+    highlight Pmenu ctermfg=254 ctermbg=238 cterm=none
+    highlight PmenuMatch ctermfg=220 ctermbg=238 cterm=none
+    highlight PmenuMatchSel ctermfg=220 ctermbg=243 cterm=none
+    highlight PmenuSel ctermfg=none ctermbg=243
     highlight PmenuSbar ctermfg=254 ctermbg=236
-    highlight PmenuThumb ctermfg=none ctermbg=238
-    highlight PmenuKind ctermfg=246 ctermbg=none cterm=none
+    highlight PmenuThumb ctermfg=none ctermbg=243
+    highlight PmenuKind ctermfg=246 ctermbg=238 cterm=none
     highlight! link PmenuKindSel PmenuSel
-    highlight PmenuExtra ctermfg=246 ctermbg=none cterm=none
+    highlight PmenuExtra ctermfg=246 ctermbg=238 cterm=none
     highlight! link PmenuExtraSel PmenuSel
+    
+    # highlight Pmenu ctermfg=254 ctermbg=none cterm=none
+    # highlight PmenuSel ctermfg=none ctermbg=58
+    # highlight PmenuSbar ctermfg=254 ctermbg=236
+    # highlight PmenuThumb ctermfg=none ctermbg=238
+    # highlight PmenuKind ctermfg=246 ctermbg=none cterm=none
+    # highlight! link PmenuKindSel PmenuSel
+    # highlight PmenuExtra ctermfg=246 ctermbg=none cterm=none
+    # highlight! link PmenuExtraSel PmenuSel
 
+    # highlight Pmenu ctermfg=none ctermbg=8 cterm=none
+    # # highlight PmenuSel ctermfg=none ctermbg=24
+    # highlight PmenuSel ctermfg=none ctermbg=58
     # highlight PmenuKind ctermfg=246 ctermbg=8 cterm=none
     # highlight! link PmenuKindSel PmenuSel
     # highlight PmenuExtra ctermfg=246 ctermbg=8 cterm=none
     # highlight! link PmenuExtraSel PmenuSel
-    # highlight Pmenu ctermfg=none ctermbg=8 cterm=none
-    # # highlight PmenuSel ctermfg=none ctermbg=24
-    # highlight PmenuSel ctermfg=none ctermbg=58
     # highlight PmenuSbar ctermfg=none ctermbg=8
     # highlight PmenuThumb ctermfg=none ctermbg=240
 else
